@@ -1,0 +1,70 @@
+/* styles.css */
+
+body {
+    background-color: #FFB6C1; /* Light pink background */
+    font-family: 'Georgia', serif; /* More romantic font */
+    color: #8B0000; /* Dark red text */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><circle cx="50" cy="50" r="50" fill="rgba(255, 255, 255, 0.2)"/></svg>');
+    background-size: 30px 30px;
+}
+
+h1 {
+    font-size: 3em;
+    color: #FF1493; /* Deep pink for the title */
+    margin-bottom: 20px;
+}
+
+.heart {
+    color: #FF0000; /* Red hearts */
+    font-size: 1.5em;
+    animation: heartbeat 1s infinite;
+}
+
+@keyframes heartbeat {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.content {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 40px;
+    margin: 20px auto;
+    border-radius: 20px;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+/* Hover effect for links if you add them */
+a {
+    color: #FF1493;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #8B0000;
+    text-decoration: underline;
+}
+
+/* For responsive design */
+@media screen and (max-width: 600px) {
+    .content {
+        padding: 20px;
+    }
+    h1 {
+        font-size: 2em;
+    }
+}
