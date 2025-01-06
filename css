@@ -1,96 +1,61 @@
 /* General Styles */
 body {
-    background-color: #FF0000; /* Red background */
-    font-family: 'Georgia', serif; /* Romantic serif font */
-    color: #FFF; /* White text for contrast */
-    text-align: center;
     margin: 0;
     padding: 0;
-}
-
-/* Heart Background */
-.heart-background {
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    background: linear-gradient(to bottom, #FF4D4D, #FF0000); /* Romantic red gradient */
-    overflow: hidden;
-}
-
-/* Floating Hearts */
-.heart-background::before,
-.heart-background::after {
-    content: '❤️';
-    position: absolute;
-    font-size: 4em;
-    animation: float 10s infinite ease-in-out;
-    color: rgba(255, 255, 255, 0.7); /* Translucent white hearts */
-}
-
-.heart-background::before {
-    top: 10%;
-    left: 15%;
-    animation-delay: 0s;
-}
-
-.heart-background::after {
-    bottom: 20%;
-    right: 20%;
-    animation-delay: 3s;
-}
-
-@keyframes float {
-    0% {
-        transform: translateY(0);
-        opacity: 0.8;
-    }
-    50% {
-        transform: translateY(-50px);
-        opacity: 1;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 0.8;
-    }
-}
-
-/* Content Styling */
-.content {
-    background: rgba(255, 255, 255, 0.9);
-    padding: 40px;
-    margin: 40px auto;
-    border-radius: 20px;
-    max-width: 800px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    color: #8B0000; /* Deep romantic red text inside content */
-}
-
-/* Section Headings */
-h1, h2 {
     font-family: 'Georgia', serif;
-    color: #FFF; /* White headings for contrast */
+    background-color: #FF0000; /* Romantic red background */
+    color: #FFF; /* White text */
+    text-align: center;
 }
 
+/* ASCII Hearts */
+.ascii-hearts {
+    color: #FFF;
+    font-size: 1.5em;
+    margin-top: 20px;
+    line-height: 2;
+}
+
+/* Content Box */
+.content {
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+    color: #8B0000; /* Deep red text */
+    padding: 40px;
+    margin: 20px auto;
+    border-radius: 10px;
+    max-width: 800px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Titles */
 h1 {
-    font-size: 4em;
-    margin-bottom: 30px;
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    color: #FFF;
 }
 
 h2 {
     font-size: 2.5em;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 /* Paragraphs */
 p {
-    font-size: 1.8em;
+    font-size: 1.5em;
+    margin-bottom: 20px;
     line-height: 1.8;
-    margin-bottom: 25px;
-    color: #8B0000; /* Romantic dark red */
+}
+
+/* ASCII Art */
+.ascii-art {
+    font-size: 0.9em;
+    line-height: 1.2;
+    color: #FF69B4; /* Hot pink for ASCII art */
+    margin: 20px auto;
 }
 
 /* Photo Gallery */
-.photo-gallery .gallery {
+.photo-gallery {
     display: flex;
     justify-content: center;
     gap: 20px;
@@ -98,16 +63,29 @@ p {
 }
 
 .photo-gallery img {
-    width: 30%;
+    width: 40%;
     height: auto;
-    border-radius: 15px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .photo-gallery img:hover {
     transform: scale(1.1);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.6);
+}
+
+/* Features List */
+ul {
+    list-style-type: none;
+    padding: 0;
+    font-size: 1.3em;
+    line-height: 1.8;
+}
+
+ul li {
+    margin: 10px 0;
+    text-align: left;
 }
 
 /* Call to Action */
