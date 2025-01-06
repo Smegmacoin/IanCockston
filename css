@@ -1,7 +1,7 @@
 /* General Styles */
 body {
     background-color: #FFC0CB; /* Light pink background */
-    font-family: 'Arial', sans-serif;
+    font-family: 'Georgia', serif; /* Romantic serif font */
     color: #8B0000; /* Dark red text */
     text-align: center;
     margin: 0;
@@ -12,8 +12,8 @@ body {
 .heart-background {
     position: relative;
     width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom, #FFB6C1, #FF69B4); /* Pink gradient */
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #FFC0CB, #FF69B4); /* Pink gradient */
     overflow: hidden;
 }
 
@@ -22,35 +22,34 @@ body {
 .heart-background::after {
     content: '❤️';
     position: absolute;
-    font-size: 2em;
+    font-size: 3em;
     animation: float 8s infinite ease-in-out;
+    color: rgba(255, 0, 0, 0.5); /* Translucent red hearts */
 }
 
 .heart-background::before {
     top: 10%;
-    left: 20%;
-    font-size: 3em;
-    animation-delay: 1s;
+    left: 15%;
+    animation-delay: 0s;
 }
 
 .heart-background::after {
-    bottom: 15%;
-    right: 25%;
-    font-size: 3em;
-    animation-delay: 3s;
+    bottom: 20%;
+    right: 20%;
+    animation-delay: 2s;
 }
 
 @keyframes float {
     0% {
-        transform: translateY(0) rotate(0deg);
+        transform: translateY(0);
         opacity: 0.7;
     }
     50% {
-        transform: translateY(-50px) rotate(45deg);
+        transform: translateY(-30px);
         opacity: 1;
     }
     100% {
-        transform: translateY(0) rotate(0deg);
+        transform: translateY(0);
         opacity: 0.7;
     }
 }
@@ -58,41 +57,70 @@ body {
 /* Content Styling */
 .content {
     background: rgba(255, 255, 255, 0.9);
-    padding: 30px;
+    padding: 40px;
     margin: 40px auto;
-    border-radius: 15px;
+    border-radius: 20px;
     max-width: 800px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Section Headings */
+h1, h2 {
+    font-family: 'Georgia', serif;
+    color: #FF1493; /* Deep pink for the title */
 }
 
 h1 {
     font-size: 4em;
-    color: #FF1493; /* Deep pink for the title */
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 2.5em;
     margin-bottom: 20px;
 }
 
-.heart {
-    color: #FF0000; /* Red hearts */
-    font-size: 1.5em;
-}
-
+/* Paragraphs */
 p {
-    font-size: 1.5em;
+    font-size: 1.8em;
     line-height: 1.8;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    color: #8B0000; /* Romantic dark red */
 }
 
-/* Photo Styling */
+/* Photo Gallery */
+.photo-gallery .gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
 .photo-gallery img {
-    width: 50%; /* Smaller image size */
+    width: 30%;
     height: auto;
-    border-radius: 10px;
-    margin-top: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .photo-gallery img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Call to Action */
+.cta .button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.5em;
+    color: #FFF;
+    background-color: #FF1493;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.cta .button:hover {
+    background-color: #FF69B4;
 }
